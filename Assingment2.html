@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id = demo> </h3>
+    <h3 id = demo1></h3>
+    <h3 id = demo2></h3>
+    <script>
+        var x = multiplyByTwo(5);
+        function multiplyByTwo(num){
+            return num*2;
+        }
+        document.getElementById("demo").innerHTML = x;
+
+        var y = divideByTwo(10);
+        function divideByTwo(num){
+            return num/2;
+        }
+        document.getElementById("demo1").innerHTML = y;
+
+        var z = findprime(50);
+        function findprime(num){
+            var primes = [];
+            let count = 0
+            let i, j
+            for (j = 2; j <= num; j++) {
+                for (i = 1; i <= j; i++) {
+                    if (j % i == 0)
+                        count++
+                }
+                if (count == 2)
+                    primes.push(j);
+                count = 0
+            }
+            return primes;
+        }
+        document.getElementById("demo2").innerHTML = z;
+    </script>
+</body>
+</html>
