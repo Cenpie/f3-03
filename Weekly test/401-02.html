@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .has-children{
+            list-style-type: none;
+
+        }
+        .has-children li{  
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 3px;
+            width: 7%;
+            margin-top: 3px;
+        }
+        .container{
+            position: relative;
+            left: 650px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="has-children">
+            <li>
+                1st child
+            </li>
+            <li>
+                2nd child
+            </li>
+            <li>
+                3rd child
+            </li>
+            <li>
+                4th child
+            </li>
+            <li>
+                5th child
+            </li>
+            <li>
+                6th child
+            </li>
+            <li>
+                7th child
+            </li>
+            <li>
+                8th child
+            </li>
+            <li>
+                9th child
+            </li>
+            <li>
+                10th child
+            </li>
+            <li>
+                11th child
+            </li>
+            <li>
+                12th child
+            </li>
+            <li>
+                13th child
+            </li>
+            <li>
+                14th child
+            </li>
+            <li>
+                15th child
+            </li>
+            <li>
+                16th child
+            </li>
+            <li>
+                17th child
+            </li>
+        </ul> 
+    </div>
+    <script>
+        var x = document.getElementsByTagName('li');
+        for(let i = 0; i < x.length; i++){
+            if(i % 2 != 0 && i > 0){
+                document.getElementsByTagName('li')[i].style.background = "lime";
+                document.getElementsByTagName('li')[i].style.color = "white";
+            }
+            if(i == 0){
+                document.getElementsByTagName('li')[i].style.background = "blue";
+                document.getElementsByTagName('li')[i].style.color = "white";
+            }
+            if(i == 8){
+                document.getElementsByTagName('li')[i].style.background = "green";
+                document.getElementsByTagName('li')[i].style.color = "white";
+            }
+            if(i == x.length-1){
+                document.getElementsByTagName('li')[i].style.background = "palevioletred";
+                document.getElementsByTagName('li')[i].style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>
